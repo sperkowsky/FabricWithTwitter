@@ -8,7 +8,7 @@ import android.widget.TextView;
 
 public class NotificationActivity extends Activity {
     private static final String TAG = NotificationActivity.class.getSimpleName();
-    public static final String EXTRA_TITLE = "tweet";
+    public static final String TWEET_KEY = "tweet";
     private TextView mTextView;
 
     @Override
@@ -21,7 +21,7 @@ public class NotificationActivity extends Activity {
         Intent intent = getIntent();
         if (intent != null) {
             // Push Tweet to TextView
-            mTextView.setText(intent.getStringExtra(EXTRA_TITLE));
+            mTextView.setText(intent.getStringExtra(TWEET_KEY));
         }
     }
 }

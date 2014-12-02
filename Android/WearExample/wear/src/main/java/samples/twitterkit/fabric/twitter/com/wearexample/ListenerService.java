@@ -31,7 +31,7 @@ public class ListenerService extends WearableListenerService {
         // Build intent for notification content
         Intent viewIntent = new Intent(this, NotificationActivity.class);
         String tweet = new String(messageEvent.getData());
-        viewIntent.putExtra("txt", tweet);
+        viewIntent.putExtra("tweet", tweet);
         PendingIntent viewPendingIntent =
                 PendingIntent.getActivity(this, 0, viewIntent, 0);
 
